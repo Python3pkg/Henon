@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 from PyQt5 import QtWidgets, QtCore, QtGui
-import HenonResources
-from HenonWidget import HenonWidget # for PyQt-only Henon widget
-from HenonUpdate import HenonUpdate
-from HenonCalc import HenonCalc
-from HenonHelp import HenonHelp
-from HenonSettings import HenonSettings
+from . import HenonResources
+from .HenonWidget import HenonWidget # for PyQt-only Henon widget
+from .HenonUpdate import HenonUpdate
+from .HenonCalc import HenonCalc
+from .HenonHelp import HenonHelp
+from .HenonSettings import HenonSettings
 from multiprocessing import cpu_count
 import ntpath, pickle
 from math import ceil
@@ -13,7 +13,7 @@ from math import ceil
 try:
     # check if PyOpenCL is present as it is optional
     import pyopencl as cl
-    from HenonCalc2 import HenonCalc2
+    from .HenonCalc2 import HenonCalc2
     module_opencl_present = True
 except ImportError:
     module_opencl_present = False

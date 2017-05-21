@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
+
 from PyQt5 import QtCore
 from random import uniform
 import multiprocessing as mp

@@ -2,9 +2,9 @@
 # Warning: If you run the program in Spyder or some other interactive console then multiprocessing will not work
 
 from PyQt5 import QtWidgets, QtCore, QtGui
-from MainGui import MainGui
+from .MainGui import MainGui
 import sys
-import HenonResources
+from . import HenonResources
 import multiprocessing as mp
     
 if __name__ == "__main__":

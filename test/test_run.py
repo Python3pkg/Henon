@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
+
 import numpy as np
 from random import uniform
 from datetime import datetime
@@ -22,7 +22,7 @@ def test_run():
     
     time_start = datetime.now()
     
-    for i in xrange(1000000):
+    for i in range(1000000):
         try:
             x_test, y_test = 1 + heny - (hena*(henx**2)), henb * henx
             #print x_test, y_test
@@ -34,7 +34,7 @@ def test_run():
             pass
     
     delta = datetime.now() - time_start
-    print "Time: " + str(delta.seconds) + " seconds; " + str(delta.microseconds) + " microseconds"
+    print("Time: " + str(delta.seconds) + " seconds; " + str(delta.microseconds) + " microseconds")
     
     
     xy = np.array([henx,heny]) # initialization
@@ -43,7 +43,7 @@ def test_run():
     
     time_start = datetime.now()
     
-    for i in xrange(1000000):
+    for i in range(1000000):
         try:
             xy = np.sum(A*xy,axis=1) # iteration
             #print xy
@@ -53,5 +53,5 @@ def test_run():
             pass
     
     delta = datetime.now() - time_start    
-    print "Time: " + str(delta.seconds) + " seconds; " + str(delta.microseconds) + " microseconds"
+    print("Time: " + str(delta.seconds) + " seconds; " + str(delta.microseconds) + " microseconds")
 
